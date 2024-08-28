@@ -1,0 +1,492 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;700&display=swap');
+
+
+
+
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+
+::root {
+
+  font-size: 16px;
+}
+
+
+header {
+  background-color: rgb(239,238,235);
+  font-weight: bold;
+  flex-wrap: nowrap;
+  text-align: center;
+  width: 100%;
+  height: 10vh;
+  font-size: 20px;
+  z-index: 1000;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  color: black;
+}
+
+
+#h1{
+  font-weight: bold;
+  font-family: 'Inter', sans-serif;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  -webkit-text-fill-color: rgb(12, 11, 11);
+  cursor: pointer;
+  width: 10rem;
+  height: 10rem;
+
+}
+
+body{
+
+  margin-top: 5rem;
+  align-self: auto;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 2rem;
+  padding-right: 5%;
+  padding-left: 5%;
+} 
+
+
+body {
+  background-color: rgb(239,238,235); 
+}
+
+
+
+
+
+
+
+
+
+/* Media query para telas menores que 800px */
+@media (max-width: 800px) {
+  header {
+    height: 15vh;
+    /* Aumenta a altura do header em telas menores */
+  }
+
+  #h1 {
+    font-size: 24px;
+    /* Diminui o tamanho da fonte do título */
+    padding-left: 0;
+    /* Remove o preenchimento lateral */
+  }
+
+  .slideshow-container {
+    margin-top: 15vh;
+    /* Ajusta a margem superior do slideshow */
+  }
+}
+
+
+
+
+/* Estilize o link com efeito de hover */
+.im {
+  color: black;
+  font-size: 32pt;
+  transition: 0.3s;
+  font-family: "Agency FB";
+  padding: 12px;
+  margin: 0px;
+  background-color: rgba(255, 140, 40, 0);
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+}
+
+.im:hover {
+  transition: 0.2s;
+  background-color: #d9c89e;
+  ;
+}
+
+/* Centralize o texto verticalmente */
+.texto-header {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: end;
+}
+
+.container .heading {
+  font-size: 3rem;
+  margin: 2rem 0;
+  text-transform: capitalize;
+  color: var(--purple);
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+  text-shadow: none;
+}
+
+
+
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.video-container .video {
+  height: 15rem;
+  width: 25rem;
+  overflow: hidden;
+  margin: 4rem;
+}
+
+.video-container .video video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  outline: none;
+  cursor: pointer;
+  border: none;
+}
+
+.video-container .video video:hover {
+  transition: .2s linear;
+  transform: scale(1.3);
+}
+
+.video-container .video .active {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: auto;
+  width: 80%;
+  box-shadow: 0 0 0 100vh rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.video-container .video .active:hover {
+  transition: none;
+  transform: scale(1);
+}
+
+.video-container {
+  display: flex;
+  align-items: center;
+}
+
+.video {
+  position: relative;
+}
+
+.video-info {
+  font-family: 'Inter', sans-serif;
+  margin-left: 20px;
+}
+/* media queries */
+/* Media query para telas menores que 600px */
+@media (max-width: 600px) {
+  .video-container.video {
+     height: 10rem; /* Reduz a altura dos vídeos */
+     width: 18rem; /* Reduz a largura dos vídeos */
+   }
+ 
+  .video-container.video video {
+     height: 100%; /* Mantém a proporção do vídeo */
+     width: 100%; /* Mantém a proporção do vídeo */
+   }
+ 
+  .modal-content {
+     width: 70%; /* Reduz a largura do conteúdo modal */
+   }
+ }
+ 
+ /* Media query para telas menores que 900px */
+ 
+ @media (max-width: 900px) {
+  .video-container.video {
+     height: 12rem; /* Ajusta a altura dos vídeos */
+     width: 22rem; /* Ajusta a largura dos vídeos */
+   }
+ 
+  .video-container.video video {
+     height: 100%; /* Mantém a proporção do vídeo */
+     width: 100%; /* Mantém a proporção do vídeo */
+   }
+ 
+  .modal-content {
+     width: 75%; /* Ajusta a largura do conteúdo modal */
+   }
+ }
+ 
+/*estilo do modal*/
+
+
+.modal {
+  display: none; /* Oculta a modal inicialmente */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close-button {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+ 
+/* Footer */
+
+
+
+
+
+
+  /* Estilos do Footer */
+
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(239,238,235);
+    color:  black;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    /*Distribui os span igualmente*/
+    align-items: center;
+  }
+  
+  footer span {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    cursor: pointer;
+    flex-direction: row;
+    padding: 0 4px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    min-width: 400px;
+    /* Define uma largura mínima para os span */
+  }
+  
+  
+  /* Menu inferior */
+  nav.footer-menu {
+    font-family: 'Inter', 'sans-serif';
+    
+  }
+  
+  footer span:first-child {
+    text-align: start;
+    padding-left: 12%;
+  }
+  
+  footer span:nth-child(2) {
+    text-align: flex-end;
+    padding-left: 5%;
+  
+  }
+  
+  footer span:last-child {
+    text-align: flex-end;
+    padding-left: 6%;
+  }
+  
+  footer span:hover {
+    font-family: 'Inter', 'sans-serif';
+  }
+  
+  footer button {
+    background-color: rgba(13, 14, 14, 0.763);
+    color: rgba(13, 14, 14, 0.763);
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    margin-left: 20px;
+    transition: background-color 0.3s ease;
+    -webkit-text-stroke-color: black;
+  }
+  
+    /* Menu inferior */
+    nav.footer-menu {
+      font-family: 'Inter', sans-serif;
+      font-weight: 900; /* Black */
+      font-size: 1rem /* Tamanho do texto */
+    }
+  
+  footer button:hover {
+    background-color: rgba(13, 14, 14, 0.763);
+  
+  
+  }
+  
+  footer span.active,
+  footer button.active {
+  font-weight: bold;
+  
+  
+  }
+  
+  footer span,
+  footer button {
+    font-size: 1.2rem;
+    font-weight: 300;
+  }
+  
+  
+  
+ 
+/* Responsividade para telas menores que 900px */
+@media (max-width: 900px) {
+  footer {
+    padding: 10px 0;
+  }
+  
+  footer span {
+    font-size: 1.2rem;
+  }
+  footer button {
+    font-size: 2rem; /* Aumenta o tamanho da fonte para 2rem */
+    display: table-cell; /* Exibe os botões como células de uma tabela */
+    padding: 10px 20px;
+    background-color: rgba(13, 14, 14, 0.763);
+    color: rgba(13, 14, 14, 0.763);
+    border: none;
+    text-align: center;
+    margin-left: 20px;
+    transition: background-color 0.3s ease;
+    -webkit-text-stroke-color: black;
+  }
+  
+  
+}
+
+/* Responsividade para telas menores que 600px */
+@media (max-width: 600px) {
+  footer {
+    padding: 5px 0;
+  }
+  
+  footer span {
+    font-size: 1rem;
+  }
+  
+  footer button {
+    font-size: 1rem;
+  }
+}
+
+/* Responsividade para telas menores que 400px */
+@media (max-width: 400px) {
+  footer {
+    padding: 2px 0;
+  }
+  
+  footer span {
+    font-size: 0.8rem;
+  }
+  
+  footer button {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 400px) {
+  footer {
+    padding: 10px 0;
+  }
+  
+  footer span {
+    font-size: 1rem;
+    min-width: auto;
+    padding-bottom: 0;
+  }
+  
+  footer button {
+    font-size: 1rem;
+    padding: 5px 10px;
+    margin-left: 10px;
+  }
+}
+
+
+
+@media (max-width: 900px) {
+  footer {
+    padding: 10px 0;
+  }
+  
+  footer span {
+    font-size: 1.2rem;
+    min-width: auto;
+    padding-bottom: 0;
+  }
+  
+  footer button {
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    margin-left: 10px;
+  }
+}
+
+
+
+@media (min-width: 1400px) {
+  footer {
+    padding: 20px 0;
+  }
+  
+  footer span {
+    font-size: 1.5rem;
+    min-width: 400px;
+    padding-bottom: 2%;
+  }
+  
+  footer button {
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    margin-left: 20px;
+  }
+}   
