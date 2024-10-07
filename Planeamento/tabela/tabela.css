@@ -68,6 +68,7 @@ body{
   overflow: scroll 70px;
   padding-left: 5%;
   padding-right: 5%;
+  text-decoration: justify-content;
 } 
 
 
@@ -164,6 +165,7 @@ table a {
 th, td {
   padding: 8px;
   text-align: justify;
+  word-wrap: none;
 }
 
 /* Primeira coluna */
@@ -266,7 +268,8 @@ footer span:nth-child(2) {
 
 footer span:last-child {
   text-align: flex-end;
-  padding-left: 7vw;
+  padding-right: 5%;
+  
   
 }
 
@@ -330,7 +333,7 @@ footer button {
     font-size: 1.2rem;
   }
   footer button {
-    font-size: 2rem; /* Aumenta o tamanho da fonte para 2rem */
+    font-size: 1.2rem; /* Aumenta o tamanho da fonte para 1.2rem */
     display: table-cell; /* Exibe os botões como células de uma tabela */
     padding: 10px 20px;
     background-color: rgba(13, 14, 14, 0.763);
@@ -401,7 +404,7 @@ footer button {
   }
   
   footer span {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     min-width: auto;
     padding-bottom: 0;
   }
@@ -487,9 +490,7 @@ footer button {
     font-size: 0.8rem;
   }
   
-  footer button {
-
-  }
+  
 }
 
 @media (max-width: 400px) {
@@ -544,4 +545,5 @@ footer button {
     padding: 10px 20px;
     margin-left: 20px;
   }
-}
+}/*
+ Responsividade para telas menores que 400px */

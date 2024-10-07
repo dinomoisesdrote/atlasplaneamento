@@ -180,14 +180,13 @@ p{
   footer span:nth-child(2) {
     text-align: flex-end;
     padding-left: 2%;
-  
-    
+    padding-right: 5%;
   }
   
   footer span:last-child {
     text-align: flex-end;
     padding-left: 12%;
-    
+    padding-right: 5%;
   }
   
   footer span:hover {

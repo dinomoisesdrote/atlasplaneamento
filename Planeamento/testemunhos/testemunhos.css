@@ -306,7 +306,7 @@ body {
     padding: 0 4px;
     cursor: pointer;
     transition: color 0.3s ease;
-    min-width: 400px;
+    min-width: 50px;
     /* Define uma largura mínima para os span */
   }
   
@@ -330,7 +330,8 @@ body {
   
   footer span:last-child {
     text-align: flex-end;
-    padding-left: 6%;
+    padding-left: 4%;
+    padding-right: 11%;
   }
   
   footer span:hover {
@@ -431,17 +432,20 @@ body {
   footer button {
     font-size: 0.8rem;
   }
+ 
 }
 
 @media (max-width: 400px) {
   footer {
-    padding: 10px 0;
+    padding: 10px ;
+    padding-right: 10%;
   }
   
   footer span {
     font-size: 1rem;
     min-width: auto;
     padding-bottom: 0;
+    
   }
   
   footer button {
@@ -469,6 +473,7 @@ body {
     padding: 5px 10px;
     margin-left: 10px;
   }
+  
 }
 
 
@@ -489,4 +494,5 @@ body {
     padding: 10px 20px;
     margin-left: 20px;
   }
+
 }   

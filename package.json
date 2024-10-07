@@ -1,0 +1,24 @@
+
+
+{
+    "name": "atlas-do-planeamento",
+    "version": "1.0.0",
+    "description": "Seu aplicativo Express",
+    "main": "app.js",
+    "scripts": {
+      "start": "node app.js"
+    },
+    "engines": {
+      "node": ">=14.0.0"
+    },
+    "dependencies": {
+      "express": "^4.18.2",
+      // outras dependências
+    },
+    "devDependencies": {
+      // dependências de desenvolvimento, se houver
+    },
+    "keywords": [],
+    "author": "Seu Nome",
+    "license": "ISC"
+  }
